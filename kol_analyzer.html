@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOL & Influencer Analyzer - Ascend.id</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header floating-navbar">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">Ascend.id</a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li class="dropdown">
+                        <a href="kursus.html">Kursus <i class="fas fa-chevron-down dropdown-icon"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#kursus-meta">Meta Ads Lanjutan</a>
+                            <a href="#kursus-seo">SEO Praktis</a>
+                            <a href="#kursus-google-ads">Google Ads Mastery</a>
+                            <a href="#kursus-content">Content Marketing</a>
+                            <a href="#kursus-email">Email Marketing</a>
+                            <a href="#kursus-analytics">Analisis Data & Reporting</a>
+                            <a href="#kursus-influencer">Influencer Marketing</a>
+                            <a href="#kursus-affiliate">Affiliate Marketing</a>
+                            <a href="#kursus-ecommerce">E-commerce Marketing</a>
+                            <a href="#kursus-video">Video Marketing</a>
+                            <a href="#kursus-podcast">Podcast Marketing</a>
+                        </div>
+                    </li>
+                    <li><a href="toolbox.html">Toolbox</a></li>
+                    <li><a href="simulasi.html">Simulasi</a></li>
+                    <li><a href="kol_analyzer.html">KOL Analyzer</a></li> <li><a href="#harga">Harga</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="auth.html#login" class="btn btn-outline">Login</a>
+                <a href="auth.html#signup" class="btn btn-primary">Sign Up</a>
+            </div>
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h2>KOL & Influencer Analyzer</h2>
+                <p>Dapatkan insight mendalam tentang akun media sosial, tren engagement, dan temukan influencer yang tepat untuk campaign Anda.</p>
+            </div>
+        </section>
+
+        <section class="section-padded">
+            <div class="container kol-analyzer-container">
+                <div class="analyzer-card full-width">
+                    <h3><i class="fas fa-chart-bar"></i> Analisis Akun Sosial Media Mendalam</h3>
+                    <p class="section-desc-small">Masukkan URL atau username akun media sosial untuk mendapatkan data performa terkini.</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group flex-grow">
+                            <label for="social-platform">Platform:</label>
+                            <select id="social-platform">
+                                <option value="youtube">YouTube</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="tiktok">TikTok</option>
+                                <option value="x">X (Twitter)</option>
+                            </select>
+                        </div>
+                        <div class="form-group flex-grow">
+                            <label for="social-handle">Username / Channel ID:</label>
+                            <input type="text" id="social-handle" placeholder="@username atau ID channel">
+                        </div>
+                        <button class="btn btn-primary" id="analyze-btn">Analisis Sekarang</button>
+                    </div>
+
+                    <div class="analysis-results-section" id="analysisResultsSection" style="display: none;">
+                        <h4 class="creator-name-display" id="creatorNameDisplay"></h4>
+                        <div class="analysis-summary-grid">
+                            <div class="result-box-large">
+                                <span>Followers/Subscribers</span>
+                                <strong id="followers-count">N/A</strong>
+                            </div>
+                            <div class="result-box-large">
+                                <span>Total Views (YT/TikTok)</span>
+                                <strong id="total-views">N/A</strong>
+                            </div>
+                            <div class="result-box-large">
+                                <span>Engagement Rate</span>
+                                <strong id="engagement-rate">N/A</strong>
+                            </div>
+                            <div class="result-box-large">
+                                <span>Avg. Likes/Comments (IG)</span>
+                                <strong id="avg-engagement">N/A</strong>
+                            </div>
+                            <div class="result-box-large">
+                                <span>Avg. Impressions</span>
+                                <strong id="avg-impressions">N/A</strong>
+                            </div>
+                            <div class="result-box-large">
+                                <span>ER per Impression</span>
+                                <strong id="er-per-impression">N/A</strong>
+                            </div>
+                            <div class="result-box-large">
+                                <span>Avg. Post Link Clicks</span>
+                                <strong id="avg-clicks">N/A</strong>
+                            </div>
+                            <div class="result-box-large">
+                                <span>Audience Demografi</span>
+                                <strong id="audience-demographic">N/A</strong>
+                            </div>
+                            <div class="result-box-large">
+                                <span>Lokasi Utama</span>
+                                <strong id="primary-location">N/A</strong>
+                            </div>
+                        </div>
+
+                        <div class="chart-container">
+                            <h4>Grafik Engagement Rate (%)</h4>
+                            <div class="chart-containerr">
+                            <canvas id="engagementChart"></canvas>
+                            </div>
+                            <div class="chart-controls">
+                                <button class="btn btn-secondary btn-small" id="chart-er-1-week">1 Minggu</button>
+                                <button class="btn btn-secondary btn-small" id="chart-er-1-month">1 Bulan</button>
+                            </div>
+                        </div>
+
+                        <div class="chart-container mt-4"> <h4>Grafik Pertumbuhan Follower/Subscriber</h4>
+                            <canvas id="followerChart"></canvas>
+                            <div class="chart-controls">
+                                <button class="btn btn-secondary btn-small" id="chart-follower-1-week">1 Minggu</button>
+                                <button class="btn btn-secondary btn-small" id="chart-follower-1-month">1 Bulan</button>
+                            </div>
+                        </div>
+
+                        <div class="creator-summary-box">
+                            <h4>Rangkuman Analisis Kreator</h4>
+                            <p id="creatorSummaryText">Analisis kreator akan muncul di sini setelah Anda menjalankan analisis. Kami akan memberikan insight tentang tren performa dan rekomendasi relevansi dengan niche Anda.</p>
+                        </div>
+                        <p class="source-info">Data ini adalah simulasi dan ditujukan untuk tujuan demonstrasi. Sumber data aktual mungkin bervariasi.</p>
+                    </div>
+                </div>
+
+                <div class="analyzer-card full-width">
+                    <h3><i class="fas fa-users-line"></i> Rekomendasi KOL Berdasarkan Niche</h3>
+                    <p class="section-desc-small">Temukan KOL terbaik untuk niche dan platform pilihan Anda. Dilengkapi data Impressions, ER per Impression, Post Link Clicks, Audience Demografi, dan Lokasi.</p>
+                    
+                    <div class="form-row">
+                        <div class="form-group flex-grow">
+                            <label for="kol-niche">Niche:</label>
+                            <select id="kol-niche">
+                                <option value="">-- Pilih Niche --</option>
+                                <option value="fashion">Fashion & Kecantikan</option>
+                                <option value="gaming">Gaming</option>
+                                <option value="tech">Teknologi & Gadget</option>
+                                <option value="food">Kuliner & Resep</option>
+                                <option value="travel">Travel & Lifestyle</option>
+                                <option value="finance">Edukasi Keuangan</option>
+                                <option value="health">Kesehatan & Kebugaran</option>
+                                <option value="automotive">Otomotif</option>
+                                <option value="education">Edukasi</option>
+                                <option value="art">Seni & Desain</option>
+                                <option value="comedy">Komedi</option>
+                                <option value="beauty">Beauty & Makeup</option>
+                            </select>
+                        </div>
+                        <div class="form-group flex-grow">
+                            <label for="kol-platform">Platform:</label>
+                            <select id="kol-platform">
+                                <option value="">-- Semua Platform --</option>
+                                <option value="youtube">YouTube</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="tiktok">TikTok</option>
+                                <option value="x">X (Twitter)</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" id="recommend-btn">Cari Rekomendasi</button>
+                    </div>
+
+                    <div class="kol-recommendations" id="kolRecommendations" style="display: none;">
+                        <h4>KOL yang Direkomendasikan:</h4>
+                        <div class="kol-list-container" id="kolListContainer">
+                            <p class="no-kol-found" style="display: none;">Tidak ada KOL ditemukan untuk kriteria ini.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Ascend.id</h3>
+                    <p>Platform terbaik untuk menguasai digital marketing.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="kursus.html">Kursus</a></li>
+                        <li><a href="toolbox.html">Toolbox</a></li>
+                        <li><a href="simulasi.html">Simulasi</a></li>
+                    </ul>
+                </div>
+                <div class="footer-legal">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="copyright">© 2025 Ascend.id by IAN. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
