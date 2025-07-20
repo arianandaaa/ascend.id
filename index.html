@@ -3,225 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ascend.id - Belajar & Praktik Digital Marketing</title>
+    <title>Dashboard - Ascend.id</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <header class="main-header floating-navbar">
-        <div class="container">
-            <h1 class="logo"><a href="#">Ascend.id</a></h1>
-            <nav class="main-nav">
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo-sidebar">
+                    <a href="index.html">
+                        <img src="D:/PROJECT/DIGITAL%20MARKETING/Ascend/ascend.png" alt="Ascend.id Logo" class="logo-img-sidebar"> 
+                        <span class="logo-text-sidebar">Ascend.id</span>
+                    </a>
+                </h1>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="#">Beranda</a></li>
-                    <li class="dropdown">
-                        <a href="kursus.html">Kursus <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#kursus-meta">Meta Ads Lanjutan</a>
-                            <a href="#kursus-seo">SEO Praktis</a>
-                            <a href="#kursus-google-ads">Google Ads Mastery</a>
-                            <a href="#kursus-content">Content Marketing</a>
-                            <a href="#kursus-email">Email Marketing</a>
-                            <a href="#kursus-analytics">Analisis Data & Reporting</a>
-                            <a href="#kursus-influencer">Influencer Marketing</a>
-                            <a href="#kursus-affiliate">Affiliate Marketing</a>
-                            <a href="#kursus-ecommerce">E-commerce Marketing</a>
-                            <a href="#kursus-video">Video Marketing</a>
-                            <a href="#kursus-podcast">Podcast Marketing</a>
-                        </div>
+                    <li class="active"><a href="index.html"><i class="fas fa-chart-pie"></i> <span class="sidebar-text">Dashboard</span></a></li>
+                    <li><a href="kursus.html"><i class="fas fa-book-open"></i> <span class="sidebar-text">Kursus</span></a></li>
+                    <li class="has-dropdown">
+                        <a href="toolbox.html" class="sidebar-dropdown-toggle"><i class="fas fa-tools"></i> <span class="sidebar-text">Toolbox</span> <i class="fas fa-chevron-down dropdown-icon-sidebar"></i></a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="kol_analyzer.html"><i class="fas fa-chart-line"></i> <span class="sidebar-text">KOL Analyzer</span></a></li>
+                            <li><a href="simulasi.html"><i class="fas fa-calculator"></i> <span class="sidebar-text">Simulasi Iklan</span></a></li>
+                            </ul>
                     </li>
-                    <li><a href="toolbox.html">Toolbox</a></li>
-                    <li><a href="simulasi.html">Simulasi</a></li>
-                    <li><a href="#harga">Harga</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="#harga"><i class="fas fa-dollar-sign"></i> <span class="sidebar-text">Harga</span></a></li>
+                    <li><a href="#kontak"><i class="fas fa-envelope"></i> <span class="sidebar-text">Kontak</span></a></li>
                 </ul>
             </nav>
-            <div class="auth-buttons">
-                <a href="auth.html#login" class="btn btn-outline">Login</a>
-                <a href="auth.html#signup" class="btn btn-primary">Sign Up</a>
+            <div class="sidebar-footer">
+                <a href="auth.html#login" class="btn btn-outline-light-sidebar"><span class="sidebar-text">Login</span></a>
+                <a href="auth.html#signup" class="btn btn-primary-sidebar"><span class="sidebar-text">Sign Up</span></a>
+                <p class="copyright-sidebar">&copy; 2025 Ascend.id</p>
             </div>
-            <div class="hamburger" id="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-    
-    <main>
-        <section class="hero-section hero-split">
-            <div class="container hero-split-container">
-                <div class="hero-column hero-column-left">
-                    <p class="tagline">#LevelUpYourSkills</p>
-                    <h2>Mulai Belajar Digital Marketing!</h2>
-                    <p class="sub-hero">Akses kurikulum lengkap, video tutorial, dan studi kasus untuk menguasai berbagai cabang digital marketing dari dasar hingga mahir.</p>
-                    <div class="hero-cta-group">
-                        <a href="#harga-belajar" class="btn btn-primary btn-large">Mulai Trial Belajar Gratis</a>
-                        <a href="#kursus" class="btn btn-secondary btn-large">Lihat Semua Kursus <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="hero-column hero-column-right">
-                    <p class="tagline">#OptimizeYourCampaigns</p>
-                    <h2>Maksimalkan Kampanye Anda!</h2>
-                    <p class="sub-hero">Dapatkan akses ke tool digital marketing esensial, simulasi iklan interaktif, dan panduan praktis untuk digital marketerprofesional.</p>
-                    <div class="hero-cta-group">
-                        <a href="#harga-tool" class="btn btn-primary btn-large">Mulai Trial Tool Gratis</a>
-                        <a href="toolbox.html" class="btn btn-secondary btn-large">Jelajahi Toolbox <i class="fas fa-tools"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </aside>
 
-        <section id="kursus" class="feature-section">
-            <div class="container">
-                <h3>Materi Pembelajaran Mendalam</h3>
-                <p class="section-desc">Akses kurikulum terstruktur yang dirancang oleh ahli industri untuk membawa Anda dari dasar hingga mahir.</p>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <i class="fas fa-ad icon-large"></i>
-                        <h4>Meta Ads Lanjutan</h4>
-                        <p>Strategi optimasi kampanye, retargeting, dan analisis data iklan Meta untuk ROI maksimal.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-search icon-large"></i>
-                        <h4>SEO Praktis</h4>
-                        <p>Teknik SEO on-page dan off-page terbaru untuk meningkatkan peringkat dan traffic organik.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fab fa-google icon-large"></i>
-                        <h4>Google Ads Mastery</h4>
-                        <p>Membangun dan mengelola kampanye Google Ads yang efektif, dari search hingga display.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-feather-alt icon-large"></i>
-                        <h4>Content Marketing</h4>
-                        <p>Membuat konten yang menarik, relevan, dan konversi tinggi untuk audiens Anda.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-envelope-open-text icon-large"></i>
-                        <h4>Email Marketing Otomatis</h4>
-                        <p>Membangun list, membuat campaign, dan menganalisa performa email marketing.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-chart-line icon-large"></i>
-                        <h4>Analisis Data & Reporting</h4>
-                        <p>Mengukur kinerja campaign Anda menggunakan Google Analytics dan tools lainnya.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-star icon-large"></i>
-                        <h4>Influencer Marketing</h4>
-                        <p>Strategi bekerja sama dengan influencer untuk menjangkau audiens baru dan membangun brand awareness.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-handshake icon-large"></i>
-                        <h4>Affiliate Marketing</h4>
-                        <p>Memahami model bisnis affiliate dan cara membangun jaringan kemitraan yang menguntungkan.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-shopping-cart icon-large"></i>
-                        <h4>E-commerce Marketing</h4>
-                        <p>Taktik spesifik untuk meningkatkan penjualan online, optimasi toko, dan retensi pelanggan.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-video icon-large"></i>
-                        <h4>Video Marketing</h4>
-                        <p>Membuat dan mendistribusikan konten video yang menarik untuk YouTube, TikTok, dan platform lainnya.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    <div class="feature-card">
-                        <i class="fas fa-podcast icon-large"></i>
-                        <h4>Podcast Marketing</h4>
-                        <p>Strategi memanfaatkan podcast sebagai channel marketing untuk brand awareness dan lead generation.</p>
-                        <a href="#" class="card-link">Pelajari Lebih Lanjut <i class="fas fa-arrow-right"></i></a>
-                    </div>
+        <main class="main-dashboard-content">
+            <div class="dashboard-header">
+                <h2>Dashboard Overview</h2>
+                <div class="user-profile">
+                    <i class="fas fa-bell"></i>
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
                 </div>
             </div>
-        </section>
 
-        <section id="toolbox" class="tool-section">
-            <div class="container">
-                <h3>Toolbox Digital Marketing Esensial 🛠️</h3>
-                <p class="section-desc">Manfaatkan berbagai tool penting yang terintegrasi atau terpandu untuk efisiensi kerja Anda.</p>
-                <div class="tool-list">
-                    <span><i class="fab fa-google"></i> Google Analytics</span>
-                    <span><i class="fas fa-search"></i> Google Search Console</span>
-                    <span><i class="fas fa-keyboard"></i> Google Keyword Planner</span>
-                    <span><i class="fab fa-buffer"></i> Hootsuite/Buffer</span>
-                    <span><i class="fas fa-envelope"></i> Mailchimp</span>
-                    <span><i class="fas fa-lightbulb"></i> Google Trends</span>
-                    <span><i class="fas fa-tag"></i> Google Tag Manager</span>
+            <div class="dashboard-grid-main">
+                <div class="dashboard-card card-lg">
+                    <h3><i class="fas fa-graduation-cap"></i> Belajar Digital Marketing</h3>
+                    <p class="section-desc-small">Tingkatkan keahlian Anda dengan kurikulum terstruktur dan materi terbaru.</p>
+                    <div class="overview-grid">
+                        <div class="overview-item">
+                            <h4>24</h4>
+                            <span>Kursus Tersedia</span>
+                        </div>
+                        <div class="overview-item">
+                            <h4>120+</h4>
+                            <span>Modul Pembelajaran</span>
+                        </div>
+                        <div class="overview-item">
+                            <h4>80%</h4>
+                            <span>Tingkat Kelulusan</span>
+                        </div>
+                        <div class="overview-item">
+                            <h4>Baru!</h4>
+                            <span>Influencer Marketing</span>
+                        </div>
                     </div>
-                <a href="toolbox.html" class="btn btn-secondary mt-4">Lihat Semua Tool & Tutorial <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </section>
-
-        <section id="simulasi" class="simulation-section">
-            <div class="container">
-                <h3>Simulasi Nyata untuk Pengalaman Praktis 🚀</h3>
-                <p class="section-desc">Belajar dengan melakukan! Uji strategi Anda melalui simulasi Meta Ads dan Google Ads, seperti di dunia nyata.</p>
-                <div class="simulation-cards">
-                    <div class="sim-card">
-                        <h4>Simulasi Meta Ads</h4>
-                        <p>Buat dan kelola kampanye Facebook & Instagram Ads di lingkungan virtual. Eksperimen dengan target audiens, kreatif, dan anggaran tanpa risiko.</p>
-                        <a href="simulasi.html" class="btn btn-outline-dark">Mulai Simulasi <i class="fas fa-play-circle"></i></a>
-                    </div>
-                    <div class="sim-card">
-                        <h4>Simulasi Google Ads</h4>
-                        <p>Rancang kampanye Search, Display, dan Video Ads. Pelajari bidding, kata kunci, dan penargetan untuk hasil optimal.</p>
-                        <a href="simulasi.html" class="btn btn-outline-dark">Mulai Simulasi <i class="fas fa-play-circle"></i></a>
-                    </div>
+                    <a href="kursus.html" class="btn btn-primary-outline mt-3">Lihat Semua Kursus <i class="fas fa-arrow-right"></i></a>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Ascend.id</h3>
-                    <p>Platform terbaik untuk menguasai digital marketing.</p>
+                <div class="dashboard-card card-lg">
+                    <h3><i class="fas fa-chart-simple"></i> Optimalkan Kampanye dengan Tools</h3>
+                    <p class="section-desc-small">Manfaatkan tool canggih dan simulasi real-time untuk performa maksimal.</p>
+                    <div class="overview-grid">
+                        <div class="overview-item">
+                            <h4>15+</h4>
+                            <span>Tool Esensial</span>
+                        </div>
+                        <div class="overview-item">
+                            <h4>Meta & Google</h4>
+                            <span>Simulasi Iklan</span>
+                        </div>
+                        <div class="overview-item">
+                            <h4>AI Powered</h4>
+                            <span>KOL Analyzer</span>
+                        </div>
+                        <div class="overview-item">
+                            <h4>Cepat!</h4>
+                            <span>Hasil Analisis</span>
+                        </div>
+                    </div>
+                    <a href="toolbox.html" class="btn btn-primary-outline mt-3">Jelajahi Toolbox <i class="fas fa-tools"></i></a>
                 </div>
-                <div class="footer-nav">
-                    <h4>Navigasi</h4>
-                    <ul>
-                        <li><a href="#">Beranda</a></li>
-                        <li><a href="#kursus">Kursus</a></li>
-                        <li><a href="#toolbox">Toolbox</a></li>
-                        <li><a href="#simulasi">Simulasi</a></li>
+
+                <div class="dashboard-card card-md">
+                    <h3><i class="fas fa-bolt"></i> Akses Cepat</h3>
+                    <ul class="quick-access-list">
+                        <li><a href="kol_analyzer.html"><i class="fas fa-search-dollar"></i> Analisis KOL Sekarang</a></li>
+                        <li><a href="simulasi.html"><i class="fas fa-ad"></i> Buat Simulasi Iklan</a></li>
+                        <li><a href="kursus.html#kursus-meta"><i class="fas fa-lightbulb"></i> Pelajari Meta Ads Lanjutan</a></li>
+                        <li><a href="toolbox.html#google-analytics"><i class="fas fa-chart-column"></i> Cek Google Analytics</a></li>
                     </ul>
                 </div>
-                <div class="footer-legal">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Kebijakan Privasi</a></li>
-                        <li><a href="#">Syarat & Ketentuan</a></li>
+
+                <div class="dashboard-card card-md">
+                    <h3><i class="fas fa-bell"></i> Notifikasi & Aktivitas Terbaru</h3>
+                    <ul class="activity-list">
+                        <li><i class="fas fa-circle-info"></i> Kursus "Video Marketing" baru telah dirilis.</li>
+                        <li><i class="fas fa-check-circle"></i> Analisis KOL untuk @gamersaja selesai.</li>
+                        <li><i class="fas fa-bullhorn"></i> Rekomendasi KOL Niche Gaming diupdate.</li>
+                        <li><i class="fas fa-arrow-up"></i> Performa simulasi Google Ads Anda meningkat!</li>
                     </ul>
                 </div>
-                <div class="footer-contact">
-                    <h4>Ikuti Kami</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
             </div>
-            <p class="copyright">&copy; 2025 Ascend.id by IAN. All rights reserved.</p>
-        </div>
-    </footer>
-
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
-</html>
+</html> 

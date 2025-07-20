@@ -3,75 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulasi - Digital Hub</title>
+    <title>Simulasi Iklan - Ascend.id</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <h1 class="logo"><a href="index.html">Digital Hub</a></h1>
-            <nav class="main-nav">
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo-sidebar">
+                    <a href="index.html">
+                        <img src="D:/PROJECT/DIGITAL%20MARKETING/Ascend/ascend.png" alt="Ascend.id Logo" class="logo-img-sidebar"> 
+                        <span class="logo-text-sidebar">Ascend.id</span>
+                    </a>
+                </h1>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="index.html">Beranda</a></li>
-                    <li class="dropdown">
-                        <a href="kursus.html">Kursus <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#kursus-meta">Meta Ads Lanjutan</a>
-                            <a href="#kursus-seo">SEO Praktis</a>
-                            <a href="#kursus-google-ads">Google Ads Mastery</a>
-                            <a href="#kursus-content">Content Marketing</a>
-                            <a href="#kursus-email">Email Marketing</a>
-                            <a href="#kursus-analytics">Analisis Data & Reporting</a>
-                        </div>
+                    <li><a href="index.html"><i class="fas fa-chart-pie"></i> <span class="sidebar-text">Dashboard</span></a></li>
+                    <li><a href="kursus.html"><i class="fas fa-book-open"></i> <span class="sidebar-text">Kursus</span></a></li>
+                    <li class="has-dropdown active">
+                        <a href="toolbox.html" class="sidebar-dropdown-toggle"><i class="fas fa-tools"></i> <span class="sidebar-text">Toolbox</span> <i class="fas fa-chevron-down dropdown-icon-sidebar"></i></a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="kol_analyzer.html"><i class="fas fa-chart-line"></i> <span class="sidebar-text">KOL Analyzer</span></a></li>
+                            <li class="active"><a href="simulasi.html"><i class="fas fa-calculator"></i> <span class="sidebar-text">Simulasi Iklan</span></a></li>
+                            </ul>
                     </li>
-                    <li><a href="toolbox.html">Toolbox</a></li>
-                    <li><a href="simulasi.html">Simulasi</a></li>
-                    <li><a href="#harga">Harga</a></li>
-                    <li><a href="#kontak">Kontak</a></li>
+                    <li><a href="#harga"><i class="fas fa-dollar-sign"></i> <span class="sidebar-text">Harga</span></a></li>
+                    <li><a href="#kontak"><i class="fas fa-envelope"></i> <span class="sidebar-text">Kontak</span></a></li>
                 </ul>
             </nav>
-            <div class="auth-buttons">
-                <a href="auth.html#login" class="btn btn-outline">Login</a>
-                <a href="auth.html#signup" class="btn btn-primary">Sign Up</a>
+            <div class="sidebar-footer">
+                <a href="auth.html#login" class="btn btn-outline-light-sidebar"><span class="sidebar-text">Login</span></a>
+                <a href="auth.html#signup" class="btn btn-primary-sidebar"><span class="sidebar-text">Sign Up</span></a>
+                <p class="copyright-sidebar">&copy; 2025 Ascend.id</p>
             </div>
-            <div class="hamburger" id="hamburger-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
+        </aside>
 
-    <main>
-        <section class="page-hero">
-            <div class="container">
-                <h2>Area Simulasi Interaktif</h2>
-                <p>Uji strategi digital marketing Anda dalam lingkungan yang aman dan tanpa risiko.</p>
-            </div>
-        </section>
-
-        <section class="section-padded">
-            <div class="container">
-                <div class="simulation-overview-grid">
-                    <div class="sim-card sim-overview-card">
-                        <i class="fab fa-facebook icon-xl"></i>
-                        <h4>Simulasi Meta Ads</h4>
-                        <p>Pelajari cara membuat, menargetkan, dan mengoptimasi kampanye iklan di Facebook dan Instagram. Dapatkan *feedback* instan tentang performa iklan Anda.</p>
-                        <a href="#meta-sim" class="btn btn-primary btn-small">Mulai Simulasi Meta Ads</a>
-                    </div>
-                    <div class="sim-card sim-overview-card">
-                        <i class="fab fa-google icon-xl"></i>
-                        <h4>Simulasi Google Ads</h4>
-                        <p>Rancang strategi iklan pencarian dan display di Google. Pahami bidding, kata kunci, dan penempatan iklan untuk mencapai audiens yang tepat.</p>
-                        <a href="#google-sim" class="btn btn-primary btn-small">Mulai Simulasi Google Ads</a>
-                    </div>
+        <main class="main-dashboard-content">
+            <div class="dashboard-header">
+                <h2>Simulasi Iklan Interaktif</h2>
+                <div class="user-profile">
+                    <i class="fas fa-bell"></i>
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
                 </div>
+            </div>
 
-                <div class="simulation-detail-section" id="meta-sim">
-                    <h3>Simulasi Meta Ads</h3>
-                    <p class="section-desc">Berikut adalah antarmuka awal untuk simulasi Meta Ads. Anda bisa mengatur parameter dan melihat hasil estimasi.</p>
+            <div class="dashboard-section simulation-section-dashboard">
+                <div class="dashboard-card card-half-width">
+                    <h3><i class="fab fa-facebook"></i> Simulasi Meta Ads</h3>
+                    <p class="section-desc-small">Pelajari cara membuat, menargetkan, dan mengoptimasi kampanye iklan di Facebook dan Instagram.</p>
                     <div class="simulation-interface">
                         <div class="sim-controls">
                             <h4>Pengaturan Kampanye</h4>
@@ -87,7 +72,7 @@
                                 <label for="audience">Target Audiens:</label>
                                 <textarea id="audience" rows="3" placeholder="Minat: Fashion, Olahraga; Demografi: Wanita, 18-35; Lokasi: Jakarta"></textarea>
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label for="placement">Penempatan Iklan:</label>
                                 <select id="placement">
                                     <option value="auto">Otomatis</option>
@@ -96,32 +81,32 @@
                                     <option value="stories">Stories</option>
                                 </select>
                             </div>
-                            <button class="btn btn-primary" id="run-meta-sim">Jalankan Simulasi</button>
+                            <button class="btn btn-primary-dashboard btn-block" id="run-meta-sim">Jalankan Simulasi</button>
                         </div>
                         <div class="sim-results">
                             <h4>Hasil Estimasi</h4>
                             <div id="meta-sim-output">
-                                <p>Jalankan simulasi untuk melihat estimasi jangkauan, klik, dan biaya.</p>
+                                <p class="initial-message">Jalankan simulasi untuk melihat estimasi jangkauan, klik, dan biaya.</p>
                                 <div class="result-box">
                                     <h5>Jangkauan Estimasi:</h5>
-                                    <p><span id="reach-estimate">50.000 - 150.000</span> Orang</p>
+                                    <p><span id="reach-estimate">N/A</span> Orang</p>
                                 </div>
                                 <div class="result-box">
                                     <h5>Klik Estimasi (CTR):</h5>
-                                    <p><span id="clicks-estimate">1.000 - 3.000</span> Klik (2.5%)</p>
+                                    <p><span id="clicks-estimate">N/A</span> Klik (N/A%)</p>
                                 </div>
                                 <div class="result-box">
                                     <h5>Biaya per Klik (CPC):</h5>
-                                    <p>$<span id="cpc-estimate">0.25</span></p>
+                                    <p>$<span id="cpc-estimate">N/A</span></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="simulation-detail-section" id="google-sim">
-                    <h3>Simulasi Google Ads</h3>
-                    <p class="section-desc">Ini adalah antarmuka dasar untuk simulasi Google Ads. Anda bisa bereksperimen dengan kata kunci dan anggaran.</p>
+                <div class="dashboard-card card-half-width">
+                    <h3><i class="fab fa-google"></i> Simulasi Google Ads</h3>
+                    <p class="section-desc-small">Rancang strategi iklan pencarian dan display di Google. Pahami bidding, kata kunci, dan penempatan iklan.</p>
                     <div class="simulation-interface">
                          <div class="sim-controls">
                             <h4>Pengaturan Kampanye</h4>
@@ -137,7 +122,7 @@
                                 <label for="g-keywords">Kata Kunci (pisahkan dengan koma):</label>
                                 <textarea id="g-keywords" rows="3" placeholder="sepatu olahraga, sepatu lari murah, beli sepatu online"></textarea>
                             </div>
-                             <div class="form-group">
+                            <div class="form-group">
                                 <label for="g-match-type">Jenis Pencocokan Kata Kunci:</label>
                                 <select id="g-match-type">
                                     <option value="broad">Luas</option>
@@ -145,69 +130,31 @@
                                     <option value="exact">Tepat</option>
                                 </select>
                             </div>
-                            <button class="btn btn-primary" id="run-google-sim">Jalankan Simulasi</button>
+                            <button class="btn btn-primary-dashboard btn-block" id="run-google-sim">Jalankan Simulasi</button>
                         </div>
                         <div class="sim-results">
                             <h4>Hasil Estimasi</h4>
                             <div id="google-sim-output">
-                                <p>Jalankan simulasi untuk melihat estimasi impresi dan klik berdasarkan kata kunci.</p>
+                                <p class="initial-message">Jalankan simulasi untuk melihat estimasi impresi dan klik berdasarkan kata kunci.</p>
                                 <div class="result-box">
                                     <h5>Impresi Estimasi:</h5>
-                                    <p><span id="g-impressions">10.000 - 30.000</span></p>
+                                    <p><span id="g-impressions">N/A</span></p>
                                 </div>
                                 <div class="result-box">
                                     <h5>Klik Estimasi:</h5>
-                                    <p><span id="g-clicks">300 - 900</span></p>
+                                    <p><span id="g-clicks">N/A</span></p>
                                 </div>
                                 <div class="result-box">
                                     <h5>Biaya per Klik Rata-rata:</h5>
-                                    <p>$<span id="g-cpc">0.50</span></p>
+                                    <p>$<span id="g-cpc">N/A</span></p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
-
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Digital Hub</h3>
-                    <p>Platform terbaik untuk menguasai digital marketing.</p>
-                </div>
-                <div class="footer-nav">
-                    <h4>Navigasi</h4>
-                    <ul>
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="kursus.html">Kursus</a></li>
-                        <li><a href="toolbox.html">Toolbox</a></li>
-                        <li><a href="simulasi.html">Simulasi</a></li>
-                    </ul>
-                </div>
-                <div class="footer-legal">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="#">Kebijakan Privasi</a></li>
-                        <li><a href="#">Syarat & Ketentuan</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Ikuti Kami</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <p class="copyright">&copy; 2025 Digital Hub by IAN. All rights reserved.</p>
-        </div>
-    </footer>
-
+        </main>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
