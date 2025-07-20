@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolbox - Ascend.id</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo-sidebar">
+                    <a href="index.html">
+                        <img src="ascend.png" alt="Ascend.id Logo" class="logo-img-sidebar"> 
+                        <span class="logo-text-sidebar">Ascend.id</span>
+                    </a>
+                </h1>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chart-pie"></i> <span class="sidebar-text">Dashboard</span></a></li>
+                    <li><a href="kursus.html"><i class="fas fa-book-open"></i> <span class="sidebar-text">Kursus</span></a></li>
+                    <li class="has-dropdown active">
+                        <a href="toolbox.html" class="sidebar-dropdown-toggle"><i class="fas fa-tools"></i> <span class="sidebar-text">Toolbox</span> <i class="fas fa-chevron-down dropdown-icon-sidebar"></i></a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="kol_analyzer.html"><i class="fas fa-chart-line"></i> <span class="sidebar-text">KOL Analyzer</span></a></li>
+                            <li><a href="simulasi.html"><i class="fas fa-calculator"></i> <span class="sidebar-text">Simulasi Iklan</span></a></li>
+                            </ul>
+                    </li>
+                    <li><a href="#harga"><i class="fas fa-dollar-sign"></i> <span class="sidebar-text">Harga</span></a></li>
+                    <li><a href="#kontak"><i class="fas fa-envelope"></i> <span class="sidebar-text">Kontak</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="auth.html#login" class="btn btn-outline-light-sidebar"><span class="sidebar-text">Login</span></a>
+                <a href="auth.html#signup" class="btn btn-primary-sidebar"><span class="sidebar-text">Sign Up</span></a>
+                <p class="copyright-sidebar">&copy; 2025 Ascend.id</p>
+            </div>
+        </aside>
+
+        <main class="main-dashboard-content">
+            <div class="dashboard-header">
+                <h2>Toolbox Digital Marketing</h2>
+                <div class="user-profile">
+                    <i class="fas fa-bell"></i>
+                    <img src="https://via.placeholder.com/40" alt="User Avatar" class="user-avatar">
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <div class="dashboard-card card-full-width">
+                    <p class="section-desc-small text-center">Kumpulan tool esensial yang akan mendukung setiap langkah kampanye digital Anda.</p>
+                    
+                    <div class="tool-grid-dashboard">
+                        <div class="tool-item-card-dashboard">
+                            <i class="fas fa-bullhorn icon-xl-dashboard" style="color: var(--secondary-color);"></i>
+                            <h4>KOL & Influencer Analyzer</h4>
+                            <p>Analisis performa akun media sosial dan temukan rekomendasi KOL untuk niche spesifik Anda.</p>
+                            <a href="kol_analyzer.html" class="btn btn-primary-dashboard">Akses Tool <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                        
+                        <div class="tool-item-card-dashboard">
+                            <i class="fas fa-calculator icon-xl-dashboard" style="color: var(--primary-color);"></i>
+                            <h4>Simulasi Iklan (Meta & Google)</h4>
+                            <p>Uji strategi iklan Anda dalam lingkungan simulasi tanpa risiko, untuk Meta Ads dan Google Ads.</p>
+                            <a href="simulasi.html" class="btn btn-primary-dashboard">Akses Tool <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <div class="tool-item-card-dashboard">
+                            <i class="fab fa-google icon-xl-dashboard"></i>
+                            <h4>Google Analytics</h4>
+                            <p>Analisis traffic website dan perilaku pengguna untuk optimasi performa.</p>
+                            <a href="https://analytics.google.com/" target="_blank" class="btn btn-outline-dashboard">Akses Tool <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tool-item-card-dashboard">
+                            <i class="fas fa-search icon-xl-dashboard"></i>
+                            <h4>Google Search Console</h4>
+                            <p>Pantau performa website di hasil pencarian Google dan temukan masalah SEO.</p>
+                            <a href="https://search.google.com/search-console/" target="_blank" class="btn btn-outline-dashboard">Akses Tool <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tool-item-card-dashboard">
+                            <i class="fas fa-keyboard icon-xl-dashboard"></i>
+                            <h4>Google Keyword Planner</h4>
+                            <p>Temukan ide kata kunci baru dan riset volume pencarian untuk SEO/SEM.</p>
+                            <a href="https://ads.google.com/intl/id_id/home/tools/keyword-planner/" target="_blank" class="btn btn-outline-dashboard">Akses Tool <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tool-item-card-dashboard">
+                            <i class="fab fa-buffer icon-xl-dashboard"></i>
+                            <h4>Hootsuite & Buffer</h4>
+                            <p>Platform manajemen media sosial untuk menjadwalkan postingan dan analisis.</p>
+                            <a href="https://hootsuite.com/" target="_blank" class="btn btn-outline-dashboard">Akses Hootsuite <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tool-item-card-dashboard">
+                            <i class="fas fa-envelope icon-xl-dashboard"></i>
+                            <h4>Mailchimp</h4>
+                            <p>Buat dan kelola kampanye email marketing, dari newsletter hingga otomatisasi.</p>
+                            <a href="https://mailchimp.com/" target="_blank" class="btn btn-outline-dashboard">Akses Tool <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tool-item-card-dashboard">
+                            <i class="fas fa-lightbulb icon-xl-dashboard"></i>
+                            <h4>Google Trends</h4>
+                            <p>Eksplorasi tren pencarian dan popularitas topik di seluruh dunia.</p>
+                            <a href="https://trends.google.com/trends/" target="_blank" class="btn btn-outline-dashboard">Akses Tool <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tool-item-card-dashboard">
+                            <i class="fas fa-tag icon-xl-dashboard"></i>
+                            <h4>Google Tag Manager</h4>
+                            <p>Kelola semua tag website Anda dengan mudah tanpa koding berulang.</p>
+                            <a href="https://tagmanager.google.com/" target="_blank" class="btn btn-outline-dashboard">Akses Tool <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                        <div class="tool-item-card-dashboard">
+                            <i class="fas fa-link icon-xl-dashboard"></i>
+                            <h4>Ahrefs / SEMrush</h4>
+                            <p>Platform SEO all-in-one untuk riset kata kunci, backlink, dan analisis kompetitor.</p>
+                            <a href="https://ahrefs.com/" target="_blank" class="btn btn-outline-dashboard">Akses Ahrefs <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

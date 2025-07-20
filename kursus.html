@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursus - Ascend.id</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo-sidebar">
+                    <a href="index.html">
+                        <img src="ascend.png" alt="Ascend.id Logo" class="logo-img-sidebar"> 
+                        <span class="logo-text-sidebar">Ascend.id</span>
+                    </a>
+                </h1>
+                <button class="sidebar-toggle" id="sidebarToggle">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-chart-pie"></i> <span class="sidebar-text">Dashboard</span></a></li>
+                    <li class="active"><a href="kursus.html"><i class="fas fa-book-open"></i> <span class="sidebar-text">Kursus</span></a></li>
+                    <li class="has-dropdown">
+                        <a href="toolbox.html" class="sidebar-dropdown-toggle"><i class="fas fa-tools"></i> <span class="sidebar-text">Toolbox</span> <i class="fas fa-chevron-down dropdown-icon-sidebar"></i></a>
+                        <ul class="sidebar-submenu">
+                            <li><a href="kol_analyzer.html"><i class="fas fa-chart-line"></i> <span class="sidebar-text">KOL Analyzer</span></a></li>
+                            <li><a href="simulasi.html"><i class="fas fa-calculator"></i> <span class="sidebar-text">Simulasi Iklan</span></a></li>
+                            </ul>
+                    </li>
+                    <li><a href="#harga"><i class="fas fa-dollar-sign"></i> <span class="sidebar-text">Harga</span></a></li>
+                    <li><a href="#kontak"><i class="fas fa-envelope"></i> <span class="sidebar-text">Kontak</span></a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="auth.html#login" class="btn btn-outline-light-sidebar"><span class="sidebar-text">Login</span></a>
+                <a href="auth.html#signup" class="btn btn-primary-sidebar"><span class="sidebar-text">Sign Up</span></a>
+                <p class="copyright-sidebar">&copy; 2025 Ascend.id</p>
+            </div>
+        </aside>
+
+        <main class="main-dashboard-content">
+            <div class="dashboard-header">
+                <h2>Semua Kursus Kami</h2>
+                <div class="user-profile">
+                    <i class="fas fa-bell"></i>
+                    <img src="ascend.png" alt="Ascend Logo" class="user-avatar">
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <div class="dashboard-card card-full-width">
+                    <p class="section-desc-small text-center">Pilih jalur pembelajaran Anda dan kuasai Digital Marketing dari ahli industri.</p>
+
+                    <div class="course-filter-bar">
+                        <input type="text" placeholder="Cari kursus..." class="search-input">
+                        <select class="filter-select">
+                            <option value="">Semua Level</option>
+                            <option value="pemula">Pemula</option>
+                            <option value="menengah">Menengah</option>
+                            <option value="profesional">Profesional</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="">Semua Kategori</option>
+                            <option value="meta-ads">Meta Ads</option>
+                            <option value="seo">SEO</option>
+                            <option value="google-ads">Google Ads</option>
+                            <option value="content-marketing">Content Marketing</option>
+                            <option value="email-marketing">Email Marketing</option>
+                            <option value="analytics">Analisis Data & Reporting</option>
+                            <option value="influencer-marketing">Influencer Marketing</option>
+                            <option value="affiliate-marketing">Affiliate Marketing</option>
+                            <option value="e-commerce-marketing">E-commerce Marketing</option>
+                            <option value="video-marketing">Video Marketing</option>
+                            <option value="podcast-marketing">Podcast Marketing</option>
+                        </select>
+                    </div>
+
+                    <div class="feature-grid course-grid">
+                        <div class="feature-card course-card">
+                            <i class="fas fa-ad icon-course"></i> <h4>Meta Ads Lanjutan</h4>
+                            <p>Strategi optimasi kampanye, retargeting, dan analisis data iklan Meta untuk ROI maksimal.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Menengah</span>
+                                <span><i class="fas fa-book"></i> 8 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Mulai Belajar</a>
+                        </div>
+
+                        <div class="feature-card course-card">
+                            <i class="fas fa-search icon-course"></i> <h4>SEO Praktis</h4>
+                            <p>Teknik SEO on-page dan off-page terbaru untuk meningkatkan peringkat dan traffic organik.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Pemula-Menengah</span>
+                                <span><i class="fas fa-book"></i> 10 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Mulai Belajar</a>
+                        </div>
+                        
+                        <div class="feature-card course-card">
+                            <i class="fab fa-google icon-course"></i> <h4>Google Ads Mastery</h4>
+                            <p>Membangun dan mengelola kampanye Google Ads yang efektif, dari search hingga display.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Menengah</span>
+                                <span><i class="fas fa-book"></i> 7 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Mulai Belajar</a>
+                        </div>
+
+                        <div class="feature-card course-card">
+                            <i class="fas fa-feather-alt icon-course"></i> <h4>Content Marketing</h4>
+                            <p>Membuat konten yang menarik, relevan, dan konversi tinggi untuk audiens Anda.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Pemula</span>
+                                <span><i class="fas fa-book"></i> 6 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Mulai Belajar</a>
+                        </div>
+
+                        <div class="feature-card course-card">
+                            <i class="fas fa-envelope-open-text icon-course"></i> <h4>Email Marketing Otomatis</h4>
+                            <p>Membangun list, membuat campaign, dan menganalisa performa email marketing.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Menengah</span>
+                                <span><i class="fas fa-book"></i> 5 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Mulai Belajar</a>
+                        </div>
+
+                        <div class="feature-card course-card">
+                            <i class="fas fa-chart-line icon-course"></i> <h4>Analisis Data & Reporting</h4>
+                            <p>Mengukur kinerja campaign Anda menggunakan Google Analytics dan tools lainnya.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Profesional</span>
+                                <span><i class="fas fa-book"></i> 7 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Mulai Belajar</a>
+                        </div>
+                        
+                        <div class="feature-card course-card">
+                            <i class="fas fa-star icon-course"></i> <h4>Influencer Marketing</h4>
+                            <p>Strategi bekerja sama dengan influencer untuk menjangkau audiens baru dan membangun brand awareness.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Menengah</span>
+                                <span><i class="fas fa-book"></i> 6 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Pelajari Lebih Lanjut</a>
+                        </div>
+                        <div class="feature-card course-card">
+                            <i class="fas fa-handshake icon-course"></i> <h4>Affiliate Marketing</h4>
+                            <p>Memahami model bisnis affiliate dan cara membangun jaringan kemitraan yang menguntungkan.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Pemula</span>
+                                <span><i class="fas fa-book"></i> 4 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Pelajari Lebih Lanjut</a>
+                        </div>
+                        <div class="feature-card course-card">
+                            <i class="fas fa-shopping-cart icon-course"></i> <h4>E-commerce Marketing</h4>
+                            <p>Taktik spesifik untuk meningkatkan penjualan online, optimasi toko, dan retensi pelanggan.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Profesional</span>
+                                <span><i class="fas fa-book"></i> 8 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Pelajari Lebih Lanjut</a>
+                        </div>
+                        <div class="feature-card course-card">
+                            <i class="fas fa-video icon-course"></i> <h4>Video Marketing</h4>
+                            <p>Membuat dan mendistribusikan konten video yang menarik untuk YouTube, TikTok, dan platform lainnya.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Menengah</span>
+                                <span><i class="fas fa-book"></i> 7 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Pelajari Lebih Lanjut</a>
+                        </div>
+                        <div class="feature-card course-card">
+                            <i class="fas fa-podcast icon-course"></i> <h4>Podcast Marketing</h4>
+                            <p>Strategi memanfaatkan podcast sebagai channel marketing untuk brand awareness dan lead generation.</p>
+                            <div class="course-meta">
+                                <span><i class="fas fa-signal"></i> Pemula</span>
+                                <span><i class="fas fa-book"></i> 5 Modul</span>
+                            </div>
+                            <a href="detail-kursus.html" class="btn btn-primary btn-small">Pelajari Lebih Lanjut</a>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
